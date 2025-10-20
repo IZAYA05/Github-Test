@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Rajdhani', sans-serif;
+    color: #fff;
+    background: #000;
+    overflow: hidden;
+}
+
+/* Background */
+.register-container {
+    background: url('../images/Arknights.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.register-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(3px);
+}
+
+/* Box */
+.register-box {
+    position: relative;
+    z-index: 1;
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid #444;
+    padding: 40px 35px;
+    width: 360px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1s ease;
+}
+
+/* Title */
+.register-box h2 {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+/* Inputs */
+.register-box input[type="text"],
+.register-box input[type="email"],
+.register-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 3px;
+    font-size: 14px;
+    border: 1px solid #555;
+    background: #1a1a1a;
+    color: #fff;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.register-box input:focus {
+    border-color: #fff;
+    background: #111;
+}
+
+/* Button */
+.register-box button {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    border: none;
+    border-radius: 3px;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.register-box button:hover {
+    background: #ddd;
+}
+
+.register-box button:active {
+    background: #bbb;
+}
+
+/* Texts */
+.login-text {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.login-text a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Error */
+.error {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

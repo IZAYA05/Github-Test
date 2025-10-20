@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Rajdhani', sans-serif;
+    color: #fff;
+    background: #000;
+    overflow: hidden;
+}
+
+/* Background and overlay */
+.dashboard-container {
+    background: url('../images/Arknights.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+/* Header */
+header {
+    position: relative;
+    text-align: center;
+    padding-top: 40px;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.subtext {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Main content */
+.content {
+    position: relative;
+    z-index: 2;
+    height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-box {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 40px 50px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1.2s ease forwards;
+}
+
+/* Rhodes Island Logo (text style) */
+.ri-logo {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #fff;
+    border: 2px solid #fff;
+    display: inline-block;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Welcome text */
+.welcome-box h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.welcome-box span {
+    color: #fff;
+    font-weight: 700;
+}
+
+.intro-text {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Status Panel */
+.status-panel {
+    text-align: left;
+    margin: 0 auto 25px auto;
+    border: 1px solid #444;
+    padding: 15px 20px;
+    border-radius: 4px;
+    background: rgba(10, 10, 10, 0.6);
+}
+
+.status-panel p {
+    font-size: 13px;
+    color: #ccc;
+    margin: 6px 0;
+}
+
+.status-panel .label {
+    color: #fff;
+    font-weight: 600;
+    width: 150px;
+    display: inline-block;
+}
+
+/* Logout Button */
+.logout-form {
+    margin-top: 10px;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
